@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t docker-react -f Dockerfile-dev.yml .
+  - docker build -t docker-react -f Dockerfile.dev.yml .
 
 script:
   - docker run -e CI=true docker-react npm run test -- --watchAll=false
