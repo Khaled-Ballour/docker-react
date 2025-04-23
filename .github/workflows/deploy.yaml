@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t cygnetops/react-test -f Dockerfile.dev .
+        run: docker build -t ballour/dcoker-react -f Dockerfile.dev .
 
       - name: Run tests
-        run: docker run -e CI=true cygnetops/react-test npm test
+        run: docker run -e CI=true ballour/dcoker-react npm run test
